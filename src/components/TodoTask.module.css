@@ -1,0 +1,76 @@
+.task {
+  display: flex;
+  margin-top: 2rem;
+  padding: 1rem;
+  align-items: flex-start;
+  align-self: stretch;
+  justify-content: space-between;
+
+  border-radius: 8px;
+  border: 1px solid var(--gray-400);
+  background: var(--gray-500);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
+}
+
+.task span {
+  color: var(--gray-100);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.task .taskCheck {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: transparent;
+  outline: none;
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+
+  transition: background-color 0.1s;
+}
+
+.task .taskUnchecked:first-child:hover {
+  border: 2px solid var(--blue-dark);
+  background: var(--gray-400);
+}
+
+.task .taskChecked {
+  border: 1px solid var(--purple-dark);
+  background: var(--purple-dark);
+  color: var(--gray-100);
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 0.1s;
+}
+
+.task .taskChecked:hover {
+  background: var(--purple);
+}
+
+.task .descriptionTaskChecked {
+  color: var(--gray-300) !important;
+  text-decoration-line: line-through;
+}
+
+.task .taskRemove {
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: 0;
+  color: var(--gray-300);
+  cursor: pointer;
+  line-height: 0;
+  border-radius: 2px;
+}
+
+.task .taskRemove:hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gray-400);
+  padding: 0.3rem;
+  color: var(--red);
+}
